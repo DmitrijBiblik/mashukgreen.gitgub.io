@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Машук-Грин | Инновационные Агротехнологии</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">Машук.<span>Грин</span></div>
+        <nav>
+            <a href="#about">Технология</a>
+            <a href="#tour">Производство</a>
+            <a href="#team">Команда</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>Агротехнологии <br>нового поколения</h1>
+        <p>Первая в Пятигорске промышленная аквапоническая ферма. Замкнутый цикл выращивания премиальной микрозелени и рыбы под управлением искусственного интеллекта.</p>
+        <a href="#horeca" class="btn">Связаться с нами</a>
+    </section>
+
+    <section id="about">
+        <h2 class="section-title">Почему мы <span>меняем рынок</span> HoReCa</h2>
+        <div class="grid-3">
+            <div class="card">
+                <h3>🔄 Био-цикл (Аквапоника)</h3>
+                <p>Абсолютная органика. Отходы жизнедеятельности рыб питают растения, а корневая система очищает воду. Мы создали идеальный природный баланс внутри городской среды.</p>
+            </div>
+            <div class="card">
+                <h3>🌱 Формат Life-Product</h3>
+                <p>Мы поставляем зелень прямо в растущих лотках. Ваш шеф-повар срезает продукт за минуту до подачи гостю. Гарантия 100% свежести и отсутствия списаний на увядание.</p>
+            </div>
+            <div class="card">
+                <h3>⚡ Автоматизация IoT</h3>
+                <p>Наши собственные контроллеры управляют светом, уровнем PH и автополивом 24/7. Это позволяет нам держать цены ниже федеральных поставщиков при премиальном качестве.</p>
+            </div>
+        </div>
+    </section>
+<section id="horeca">
+    <div class="horeca-box">
+        <div class="horeca-text">
+            <h2>Специально для <br><span>наших клиентов</span></h2>
+            <p>Устали от нестабильного качества поставщиков, большого процента списаний и завышенных цен? Мы предлагаем прогнозируемый урожай 365 дней в году по фиксированной стоимости.</p>
+            <div class="horeca-badges">
+                <div>✓ 0% СПИСАНИЙ</div>
+                <div>✓ ФИКС. ЦЕНА</div>
+                <div>✓ LIVE-ДОСТАВКА</div>
+            </div>
+        </div>
+        
+        <div class="contact-form">
+            <h3>Связаться с отделом продаж (B2B)</h3>
+            <form>
+                <input type="text" placeholder="Название заведения" required>
+                <input type="email" placeholder="Email для КП" required>
+                <input type="tel" placeholder="+7 (___) ___-__-__" required>
+                <textarea placeholder="Ваш комментарий" rows="3"></textarea>
+                <button type="button" class="btn-submit" onclick="alert('Заявка отправлена!')">ОТПРАВИТЬ ЗАПРОС</button>
+            </form>
+        </div>
+    </div>
+</section>
+    <section id="tour" class="video-section">
+    <h2 class="section-title">Виртуальная <span>Экскурсия</span> 360°</h2>
+    
+    <div class="video-wrapper" id="videoWrapper">
+        <div class="play-overlay" id="playBtn">
+            <div class="play-icon">▶</div>
+        </div>
+
+        <video 
+            id="myVideo"
+            class="custom-player" 
+            poster="preview-image.jpg" 
+            preload="metadata" 
+            loop 
+            playsinline>
+            <source src="video/mashuk-green-promo.mp4" type="video/mp4">
+        </video>
+    </div>
+</section>
+
+        </div>
+    </section>
+
+    <section id="team" class="team-section">
+    <h2 class="section-title">Команда <span>Greend</span></h2>
+    <div class="grid-4">
+        <div class="team-card">
+            <div class="avatar">
+                <img src="img/dmitry.jpg" alt="Дмитрий Донцов">
+            </div>
+            <h4>Дмитрий Донцов</h4>
+            <div class="role">Капитан / CEO</div>
+            <div class="contact">@ddotsov</div>
+        </div>
+
+        <div class="team-card">
+            <div class="avatar">
+                <img src="img/sofya.jpg" alt="Софья Байбакова">
+            </div>
+            <h4>Софья Байбакова</h4>
+            <div class="role">Финансист / CFO</div>
+            <div class="contact">@Simka_14</div>
+        </div>
+
+        <div class="team-card">
+            <div class="avatar">
+                <img src="img/elizaveta.jpg" alt="Елизавета Евглевская">
+            </div>
+            <h4>Елизавета Евглевская</h4>
+            <div class="role">Дизайнер / CDO</div>
+            <div class="contact">@Li1454</div>
+        </div>
+    </div>
+</section>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Проект «Машук-Грин». Создано командой Greend.<br>Кластер: Инициативы в сфере продаж и услуг.</p>
+    </footer>
+<script>
+    const wrapper = document.getElementById('videoWrapper');
+    const video = document.getElementById('myVideo');
+
+    wrapper.addEventListener('click', function() {
+        if (video.paused) {
+            video.play();
+            video.muted = false; // Включаем звук
+            wrapper.classList.add('is-playing');
+            video.controls = true; // Показываем полосу прокрутки только после старта
+        } else {
+            video.pause();
+            wrapper.classList.remove('is-playing');
+        }
+    });
+</script>
+</body>
+</html>
